@@ -8,6 +8,8 @@ using namespace std;
 auto twice = [](int &a)->int{ return a *= 2; };
 auto printer = [](const auto b){ cout << b << endl; };
 
+const int my_test = 7;
+
 int main()
 {
   auto a = 2;
@@ -25,6 +27,11 @@ int main()
 
   for_each(v.begin(), v.end(), [](auto a){ cout << a << " "; });
   cout << endl;
+
+  [&] { cout << my_test << endl; } ();
+  int my_val = 5;
+  auto print_my_val = [&]{ cout << my_val << endl; };
+  print_my_val();
 
   return 0;
 }
