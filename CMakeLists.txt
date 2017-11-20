@@ -26,8 +26,8 @@ target_link_libraries(thread_test pthread)
 #
 # boost
 #
-# TIMERS
 
+# TIMERS
 add_executable(timer1 boost/timers/timer1.cpp)
 target_link_libraries(timer1 ${Boost_LIBRARIES})
 
@@ -44,7 +44,6 @@ add_executable(timer5 boost/timers/timer5.cpp)
 target_link_libraries(timer5 ${Boost_LIBRARIES})
 
 # TCP UDP
-
 add_executable(tcp_client boost/tcp/tcp_client.cpp)
 target_link_libraries(tcp_client ${Boost_LIBRARIES})
 
@@ -64,7 +63,6 @@ add_executable(udp_async_server boost/udp/udp_async_server.cpp)
 target_link_libraries(udp_async_server ${Boost_LIBRARIES})
 
 # MISCELLANEOUS
-
 add_executable(steady_timer boost/misc/steady_timer.cpp)
 target_link_libraries(steady_timer ${Boost_LIBRARIES})
 
@@ -76,3 +74,10 @@ target_link_libraries(time_server ${Boost_LIBRARIES})
 
 add_executable(coroutines boost/misc/coroutines.cpp)
 target_link_libraries(coroutines ${Boost_LIBRARIES})
+
+# THREADS
+add_executable(threads_intro boost/thread/threads_intro.cpp)
+target_link_libraries(threads_intro ${Boost_LIBRARIES})
+
+add_executable(threads_synchro boost/thread/threads_synchro.cpp)
+target_link_libraries(threads_synchro ${Boost_LIBRARIES})
