@@ -2,7 +2,9 @@
 #include <vector>
 #include <typeinfo>
 
+//
 // C++98
+//
 std::vector<int>& add_one_98(std::vector<int> &v)
 {
   for (std::vector<int>::iterator it = v.begin(); it != v.end(); ++it)
@@ -24,7 +26,9 @@ void print_vec_98(const std::vector<int> &v)
   std::cout << std::endl;
 }
 
+//
 // C++11
+//
 std::vector<int>& add_one_11(std::vector<int> &v)
 {
   for (auto &i : v)
@@ -46,7 +50,9 @@ void print_vec_11(const std::vector<int> &v)
   std::cout << std::endl;
 }
 
+//
 // C++14
+//
 auto& add_one_14(auto &v)
 {
   for (auto &i : v)
