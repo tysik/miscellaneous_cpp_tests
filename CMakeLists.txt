@@ -23,6 +23,8 @@ add_executable(thread_test std/thread_test.cpp)
 target_link_libraries(thread_test pthread)
 #set_target_properties(auto_test PROPERTIES CXX_STANDARD 14 CXX_STANDARD_REQUIRED YES CXX_EXTENSIONS NO)
 
+add_executable(deque_test std/deque_test.cpp)
+
 #
 # boost
 #
